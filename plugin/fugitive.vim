@@ -1384,6 +1384,7 @@ function! s:diffthis()
     let w:fugitive_diff_restore .= ' foldmethod=' . &l:foldmethod
     let w:fugitive_diff_restore .= ' foldcolumn=' . &l:foldcolumn
     let w:fugitive_diff_restore .= ' foldlevel=' . &l:foldlevel
+    let w:fugitive_diff_restore .= ' foldenable=' . &l:foldenable
     if has('cursorbind')
       let w:fugitive_diff_restore .= (&l:cursorbind ? ' ' : ' no') . 'cursorbind'
     endif
