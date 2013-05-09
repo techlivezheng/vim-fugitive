@@ -1492,6 +1492,11 @@ function! s:Diff(bang,...)
     wincmd p
     call s:diffthis()
     return ''
+  catch /^Vim\%((\a\+)\)\=:E21/
+    call s:diffthis()
+    wincmd p
+    call s:diffthis()
+    return ''
   catch /^fugitive:/
     return 'echoerr v:errmsg'
   endtry
